@@ -209,16 +209,9 @@ Rebalancing
 Replication Management
 
 
-HDFS Interaction (launch help):
-User:
-/hadoop/bin/hadoop fs
-Admin:
-/hadoop/bin/hadoop fsck
-/hadoop/bin/hadoop dfsadmin
-
 Web UI's on each node for info 3 status
 
-MapReduce Architecture:
+### MapReduce Architecture
 Job Client - Submits jobs
 Job Tracker - Coordinates jobs (Execution Plan and Phase Coordinator)
 Task Tracker - Executes job tasks (Execute Tasks and Reports Status)
@@ -238,7 +231,7 @@ input -> map -> shuffle/sort -> reduce -> output
 7. Job Tracker updates Status
 
 
-MapReduce Internals:
+### MapReduce Internals
 1. Split Phase (Input Splits): The input data is divided into input splits based on the Input Format. Input splits equate to a map task which all run in parallel.
 Input Format: Determines how the files are parsed into the MapReduce pipeline
 2. Map Phase (Mappers): Transforms the input splits into key/value pairs based on user-defined code
@@ -246,8 +239,7 @@ Input Format: Determines how the files are parsed into the MapReduce pipeline
 4. Reduce Phase (Reducers): Aggregates key/value pairs based on user-defined code
 OutputFormat: Determines how the results are written to the output directory
 
-Functional programming:
-avoids state mutasle data
+Functional programming avoids state mutasle data.
 
 Functional Programming: A programming paradigm that treats computation as the evaluation of mathematical functions.
 Imperative Programming: A programming paradigm that describes computation in terms of statements that change program state.
@@ -256,9 +248,13 @@ Imperative programming:
 - StateFul
 - OOP
 
-
-Minimal cluster:
+#### Minimal cluster
 Name Node
 2 Data Nodes
 
+Hadoop is a different world
 
+3 modes of hadoop installation:
+Standalone mode - all of hadoop daemons running under one JVM 
+Sudo distributive mode - all of hadoop daemons run under a separate JVM (kinda cluster on one computer)
+Fully distributed multinode cluster - every single daeomon running on it's own machine
