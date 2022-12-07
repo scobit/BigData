@@ -3,10 +3,12 @@ hdfs
 hdfs --help
 hdfs -h
 
-#### Deprecated commands
+### Deprecated commands
 /hadoop/bin/hadoop fs
 /hadoop/bin/hadoop fsck
 /hadoop/bin/hadoop dfsadmin
+
+
 
 #### check daemons are running (Java Runtime process data)  
 jps
