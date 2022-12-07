@@ -5,7 +5,9 @@ hdfs -h
 
 ### Deprecated commands
 /hadoop/bin/hadoop fs
+
 /hadoop/bin/hadoop fsck
+
 /hadoop/bin/hadoop dfsadmin
 
 
